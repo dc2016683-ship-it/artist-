@@ -19,7 +19,7 @@
             font-family: 'Segoe UI', sans-serif;
             overflow: hidden;
             background-color: #000;
-            /* Fondo: Galaxia, Océano y Luna */
+            /* Fondo Galáctico, Océano y Luna */
             background-image: url('https://w0.peakpx.com/wallpaper/515/341/HD-wallpaper-moon-over-the-ocean-moonlight-clouds-stars-sea-sky-night.jpg');
             background-size: cover;
             background-position: center;
@@ -55,7 +55,6 @@
             text-shadow: 0 0 15px rgba(0, 212, 255, 0.9), 0 0 30px rgba(0, 212, 255, 0.4);
         }
 
-        /* Botones LIQUID GLASS */
         .glass-btn {
             display: block;
             margin: 20px auto;
@@ -66,12 +65,15 @@
             font-weight: 700;
             letter-spacing: 3px;
             font-size: 1.1rem;
-            background: rgba(255, 255, 255, 0.03);
+            
+            /* Efecto Liquid Glass */
+            background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(15px);
             -webkit-backdrop-filter: blur(15px);
             border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 20px;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            
             transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
             position: relative;
             overflow: hidden;
@@ -83,6 +85,24 @@
             transform: translateY(-5px);
             box-shadow: 0 0 25px rgba(0, 212, 255, 0.5);
             letter-spacing: 5px;
+        }
+
+        /* Efecto de brillo al pasar el mouse */
+        .glass-btn::after {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: rotate(45deg);
+            transition: 0.8s;
+            pointer-events: none;
+        }
+
+        .glass-btn:hover::after {
+            left: 100%;
         }
 
         .scanlines {
@@ -104,7 +124,7 @@
     <div class="container">
         <h1>Veskard INFO</h1>
         
-        <a href="index.html" class="glass-btn">Música de Veskard</a>
+        <a href="https://dc2016683-ship-it.github.io/MUSIC/" class="glass-btn" target="_blank">Música de Veskard</a>
         
         <a href="https://beacons.ai/veskard" class="glass-btn" target="_blank">Redes Sociales</a>
     </div>
